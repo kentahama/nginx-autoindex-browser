@@ -17,6 +17,7 @@ function get(path) {
     $("nav h1").text(wd_name);
     $.getJSON(JSON_API + path)
     .done(data => {
+	$("main").empty();
 	if (path != "/")
 	    add_item({
 		type:"parent",
