@@ -44,8 +44,9 @@ function add_item(item) {
 	href = FILE_API + base + encodeURIComponent(item.name);
 	break;
     }
-    var a = $("<a>", {href: href})
-	.append($("<i>", {class: icon}))
+    var a = $("<a>", {href: href, class: "list-group-item list-group-item-action"})
+	.addClass(item.type)
+	.append($("<i>", {class: icon, style:"width:16px;"}))
 	.append($("<div>", {class: "ml-2 d-inline", text:item.name}));
-    $("ul").append($("<li>", {class:item.type}).append(a));
+    $("main").append(a);
 }
