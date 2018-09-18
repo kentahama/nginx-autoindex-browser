@@ -44,6 +44,8 @@ function add_item(item) {
     case "file": icon = "far fa-file";
 	href = FILE_API + base + encodeURIComponent(item.name);
 	break;
+    case "other": icon = "fas fa-question-circle";
+	break;
     }
     var a = $("<a>", {href: href, class: "list-group-item list-group-item-action"})
 	.addClass(item.type)
