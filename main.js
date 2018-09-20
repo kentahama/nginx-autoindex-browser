@@ -49,7 +49,7 @@ function add_item(item) {
     }
     var a = $("<a>", {href: href, class: "list-group-item list-group-item-action"})
 	.addClass(item.type)
-	.append($("<i>", {class: icon, style:"width:16px;"}))
+	.append($("<i>", {class: "text-center", style:"width:16px;"}).addClass(icon))
 	.append($("<div>", {class: "ml-2 d-inline", text:item.name}));
     if (item.size) a.append($("<div>", {class: "float-right", text:prettyBytes(item.size)}))
     $("main").append(a);
