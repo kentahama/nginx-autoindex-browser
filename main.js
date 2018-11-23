@@ -14,6 +14,7 @@ function get(path) {
     parent = dirs.slice(0, -2).join("/") + "/";
     var wd_name = decodeURIComponent(dirs.slice(-2)[0]);
     if (path == "/") wd_name = "File browser";
+    if (path != "/") document.title = "File browser - " + wd_name;
     $("nav h1").text(wd_name);
     $.getJSON(JSON_API + path)
     .done(data => {
